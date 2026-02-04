@@ -1,0 +1,31 @@
+# --- Git Aliases ---
+alias gs="git status"
+alias ga="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git log --oneline --graph --decorate"
+
+# --- Navigation ---
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# --- Modern Replacements (if installed) ---
+alias ls="ls --color=auto"
+alias ll="ls -lah"
+alias l="ls -F"
+
+# --- Python ---
+alias py="python3"
+alias venv="python3 -m venv venv"
+alias activate="source venv/bin/activate"
+
+# --- Utils ---
+alias cls="clear"
+alias h="history"
+alias myip="curl ifconfig.me"
+
+# --- OpenClaw Shortcuts ---
+alias oc="openclaw"
+alias ocs="openclaw status"
+alias ocl="openclaw logs"
