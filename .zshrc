@@ -24,5 +24,5 @@ if command -v starship >/dev/null; then
     eval "$(starship init zsh)"
 fi
 
-# Success message for Ko Kyaw Myo Naing
+# Success message
 echo "✨ Developer Environment Loaded (Python, Web, AI CLI Ready!)"

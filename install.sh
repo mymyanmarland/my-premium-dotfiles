@@ -37,4 +37,4 @@ else
     echo "⚠️ GitHub CLI missing. Install it to manage AI projects easily."
 fi
 
-echo "✅ All set! Run 'source ~/.zshrc' to activate your new workspace."
+echo "✅ All set! Run 'source ~/.zshrc' to activate your new environment."
