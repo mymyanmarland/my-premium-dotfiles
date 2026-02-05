@@ -21,40 +21,19 @@ alias py="python3"
 alias pip="python3 -m pip"
 alias venv="python3 -m venv venv"
 alias activate="source venv/bin/activate"
-alias pyclean='find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete'
 
-# --- Web Development (Node/NPM/Yarn) ---
-alias n="npm"
+# --- Web Development ---
 alias ni="npm install"
-alias ns="npm start"
 alias nd="npm run dev"
 alias nb="npm run build"
-alias yt="yarn test"
 
-# --- AI Agent & CLI Tools (The AI Powerhouse) ---
+# --- AI Tools ---
 alias oc="openclaw"
-alias ocs="openclaw status"
-alias ocl="openclaw logs"
-alias ocr="openclaw gateway restart"
-alias ocw="cd /home/codespace/.openclaw/workspace" # Go to AI workspace
-
-# Claude Code (Anthropic AI)
 alias cl="claude"
 alias cla="claude chat"
-alias cls="claude status"
-alias clc="claude config"
-
-# GitHub Copilot & Codex Tools
 alias cop="gh copilot"
-alias cope="gh copilot explain"
-alias cops="gh copilot suggest"
-
-# Aider (AI Pair Programmer)
 alias ad="aider"
-alias adp="aider --python"
-alias adw="aider --web"
 
-# --- System & Network ---
+# --- System ---
 alias h="history"
-alias myip="curl -s ifconfig.me"
-alias path='echo -e ${PATH//:/\\n}' # Show PATH in a readable way
+alias path='echo -e ${PATH//:/\\n}'
