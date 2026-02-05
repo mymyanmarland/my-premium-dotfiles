@@ -1,70 +1,94 @@
-# Premium Developer Dotfiles 🚀
+# 🚀 Premium Developer Dotfiles (Stuxnet Edition)
 
-Professional Linux Terminal configurations for Full-Stack Developers and AI Engineers.
+Professional Terminal configuration for Full-Stack Developers and AI Engineers. Optimized for **Zsh**, **Starship**, and **OpenClaw**.
 
-## ပါဝင်တဲ့အရာများ (Features)
-- **.zshrc**: Terminal shell configuration (Optimized for performance)
-- **.aliases**: အလွယ်တကူ သုံးလို့ရတဲ့ shortcuts များ (Git, Python, Web Dev, AI CLI)
-- **starship.toml**: Terminal ကို လှလှပပ ဖြစ်စေမယ့် modern prompt configuration
+## ✨ အဓိက လုပ်ဆောင်ချက်များ (Key Features)
 
-## အသုံးပြုနည်း (Installation)
+- **Starship Prompt:** မြန်ဆန်ပြီး လှပတဲ့ ခေတ်မီ Terminal Prompt။
+- **Custom Aliases:** Git, Python, Web Dev နဲ့ AI Tool တွေအတွက် အချိန်ကုန်သက်သာစေမယ့် Shortcut များ။
+- **Zsh Optimized:** သမိုင်းကြောင်း (History) ရှာဖွေရလွယ်ကူခြင်းနှင့် Auto-completion များ ပါဝင်ခြင်း။
+- **Universal Installer:** Codespace သို့မဟုတ် မည်သည့် Linux စနစ်မှာမဆို အလွယ်တကူ တပ်ဆင်နိုင်ခြင်း။
 
-၁။ ဒီ Repo ကို Clone လုပ်ပါ:
+---
+
+## 🛠 တပ်ဆင်အသုံးပြုနည်း (Installation)
+
+### ၁။ Repo ကို Clone လုပ်ပါ
 ```bash
-git clone https://github.com/mymyanmarland/my-premium-dotfiles.git ~/dotfiles
+git clone https://github.com/mymyanmarland/my-premium-dotfiles.git ~/my-premium-dotfiles
 ```
 
-၂။ Install script ကို run ပါ:
+### ၂။ Install Script ကို Run ပါ
 ```bash
-bash ~/dotfiles/install.sh
+cd ~/my-premium-dotfiles && bash install.sh
 ```
 
-၃။ Terminal ကို Restart လုပ်ပါ သို့မဟုတ် အောက်ပါ command ကို ရိုက်ပါ:
+### ၃။ Shell ပြောင်းလဲပါ (အရေးကြီးသည်)
+မိတ်ဆွေရဲ့ လက်ရှိ Shell က Bash ဖြစ်နေရင် Zsh ကို ပြောင်းပေးရပါမယ် -
+```bash
+zsh
+```
+ပြီးရင် environment ကို activate လုပ်ပါ -
 ```bash
 source ~/.zshrc
 ```
 
-## shortcuts များ (Aliases)
+---
 
-### 🤖 AI & OpenClaw
-- `oc`: OpenClaw CLI
-- `ocs`: OpenClaw status စစ်ရန်
-- `ocl`: Logs များကြည့်ရန်
-- `ocw`: AI Workspace ထဲသို့ တိုက်ရိုက်သွားရန်
+## ⌨️ အသုံးဝင်သော Shortcuts များ (Aliases)
 
-### ⬢ Web Development
+### 🐙 Git Commands
+- `gs`: `git status` (လက်ရှိ အခြေအနေ ကြည့်ရန်)
+- `ga`: `git add .` (ဖိုင်အားလုံးကို staging ထဲထည့်ရန်)
+- `gc "message"`: `git commit -m` (မှတ်ချက်ရေးပြီး commit လုပ်ရန်)
+- `gp`: `git push` (GitHub ပေါ်တင်ရန်)
+- `gl`: `git log` (သမိုင်းကြောင်းကို ပုံဖော်ကြည့်ရန်)
+
+### 🐍 Python & Data Science
+- `py`: `python3`
+- `pip`: `python3 -m pip`
+- `venv`: Virtual Environment အသစ်ဆောက်ရန်
+- `activate`: Virtual Environment ကို စတင်အသုံးပြုရန်
+- `pyclean`: မလိုအပ်တဲ့ cache ဖိုင်တွေကို ရှင်းလင်းရန်
+
+### ⬢ Web Development (NPM)
 - `ni`: `npm install`
+- `ns`: `npm start`
 - `nd`: `npm run dev`
 - `nb`: `npm run build`
 
-### 🐍 Python
-- `py`: `python3`
-- `venv`: Virtual environment ဆောက်ရန်
-- `activate`: Virtual environment အသုံးပြုရန်
+### 🤖 AI Agent (OpenClaw)
+- `oc`: OpenClaw CLI ကို ခေါ်သုံးရန်
+- `ocs`: OpenClaw ရဲ့ လက်ရှိ အခြေအနေ (Status) ကို စစ်ရန်
+- `ocl`: အလုပ်လုပ်ပုံ Logs များကို ကြည့်ရန်
+- `ocr`: Gateway ကို Restart ချရန်
+- `ocw`: AI Workspace ထဲသို့ တိုက်ရိုက်သွားရန်
 
-### 🐙 Git
-- `gs`: `git status`
-- `gp`: `git push`
-- `gc "message"`: `git commit -m "message"`
+---
 
-## နောက်ထပ် Shortcuts များ ထပ်တိုးနည်း (How to Customize)
+## 🎨 ဒီဇိုင်းပိုင်း ပြင်ဆင်နည်း (Customization)
 
-ကိုယ်ပိုင် shortcut အသစ်တွေ ထပ်ထည့်ချင်ရင် အောက်ပါအတိုင်း လုပ်နိုင်ပါတယ်:
-
-၁။ `~/.aliases` ဖိုင်ကို ဖွင့်ပါ:
+### Prompt ကို ပြင်ဆင်ရန်
+Terminal ရဲ့ အသွင်အပြင်ကို ပြင်ချင်ရင် `starship.toml` ဖိုင်ကို ပြင်နိုင်ပါတယ်:
 ```bash
-nano ~/.aliases
+nano ~/my-premium-dotfiles/starship.toml
 ```
 
-၂။ ဖိုင်ရဲ့ အောက်ဆုံးမှာ alias အသစ်ကို ပုံစံအတိုင်း ထည့်ပါ:
+### Shortcut အသစ်များ ထည့်ရန်
+မိတ်ဆွေကိုယ်ပိုင် shortcut တွေ ထည့်ချင်ရင် `.aliases` ဖိုင်မှာ သွားထည့်နိုင်ပါတယ်:
 ```bash
-alias နာမည်='command'
-# ဥပမာ: alias hi='echo "Hello World"'
+nano ~/my-premium-dotfiles/.aliases
+# ပြင်ပြီးတိုင်း ဒါလေး ရိုက်ပေးပါ - source ~/.zshrc
 ```
 
-၃။ သိမ်းပြီးထွက်ပါ (Ctrl+O, Enter, Ctrl+X)။ ပြီးရင် terminal မှာ အောက်ပါအတိုင်း ရိုက်ပါ:
-```bash
-source ~/.aliases
-```
+---
 
-Enjoy your professional terminal setup! ✨
+## ❓ ပြဿနာဖြေရှင်းနည်း (Troubleshooting)
+
+**မေး - Terminal မှာ ဘာမှမပြောင်းလဲသွားဘူး ဖြစ်နေတယ်?**
+ဖြေ - မိတ်ဆွေက Bash shell ကို သုံးနေလို့ ဖြစ်နိုင်ပါတယ်။ `echo $SHELL` လို့ ရိုက်ကြည့်ပါ။ အကယ်၍ `/bin/zsh` မဟုတ်ရင် `zsh` လို့ ရိုက်ပြီး shell ပြောင်းပေးလိုက်ပါခင်ဗျာ။
+
+---
+
+**ဖန်တီးသူ:** [ကိုပိုင် (Pi)](https://github.com/sciencedailymyanmar)  
+**ပိုင်ရှင်:** [Stuxnet](https://github.com/mymyanmarland)
