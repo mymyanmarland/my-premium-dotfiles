@@ -1,14 +1,26 @@
 #!/bin/bash
 
-echo "🚀 Starting Full-Stack & AI Developer Environment Setup..."
+# Get the directory where this script is located
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Create symlinks
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.aliases ~/.aliases
+echo "🚀 Starting Full-Stack & AI Developer Environment Setup..."
+echo "📂 Dotfiles directory: $DOTFILES_DIR"
+
+# Create symlinks using the dynamic path
+ln -sf "$DOTFILES_DIR/.zshrc" ~/.zshrc
+ln -sf "$DOTFILES_DIR/.aliases" ~/.aliases
 mkdir -p ~/.config
-ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
+ln -sf "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
 
 echo "✨ Config files linked."
+
+# Check if Zsh is installed
+if ! command -v zsh &> /dev/null; then
+    echo "🐚 Zsh is missing. Installing Zsh..."
+    if command -v apt-get &> /dev/null; then
+        sudo apt-get update && sudo apt-get install -y zsh
+    fi
+fi
 
 # Check and Install Starship
 if ! command -v starship &> /dev/null; then
@@ -37,4 +49,8 @@ else
     echo "⚠️ GitHub CLI missing. Install it to manage AI projects easily."
 fi
 
-echo "✅ All set! Run 'source ~/.zshrc' to activate your new environment."
+echo ""
+echo "✅ All set!"
+echo "👉 IMPORTANT: Your current shell is $SHELL."
+echo "👉 To use these dotfiles, switch to Zsh by running: 'zsh'"
+echo "👉 Then run 'source ~/.zshrc' to activate your new environment."
