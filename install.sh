@@ -28,6 +28,30 @@ if ! command -v starship &> /dev/null; then
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
 
+# AI Tools Check
+echo "🤖 Checking for AI Engineering tools..."
+
+# Check for Claude Code
+if ! command -v claude &> /dev/null; then
+    echo "💡 Note: Claude Code is not installed. You can install it with: npm install -g @anthropic-ai/claude-code"
+else
+    echo "✅ Claude Code detected: $(claude --version)"
+fi
+
+# Check for Aider
+if ! command -v aider &> /dev/null; then
+    echo "💡 Note: Aider is not installed. You can install it with: pip install aider-chat"
+else
+    echo "✅ Aider detected."
+fi
+
+# Check for GitHub Copilot CLI
+if ! gh extension list | grep -q "copilot"; then
+    echo "💡 Note: GitHub Copilot extension for gh is missing. Install with: gh extension install github/gh-copilot"
+else
+    echo "✅ GitHub Copilot CLI extension detected."
+fi
+
 # Check for Python
 if command -v python3 &> /dev/null; then
     echo "🐍 Python3 detected."

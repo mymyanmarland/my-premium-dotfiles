@@ -31,13 +31,28 @@ alias nd="npm run dev"
 alias nb="npm run build"
 alias yt="yarn test"
 
-# --- AI Agent & CLI Tools ---
+# --- AI Agent & CLI Tools (The AI Powerhouse) ---
 alias oc="openclaw"
 alias ocs="openclaw status"
 alias ocl="openclaw logs"
 alias ocr="openclaw gateway restart"
 alias ocw="cd /home/codespace/.openclaw/workspace" # Go to AI workspace
-alias ghw="gh run watch" # Watch GitHub Actions
+
+# Claude Code (Anthropic AI)
+alias cl="claude"
+alias cla="claude chat"
+alias cls="claude status"
+alias clc="claude config"
+
+# GitHub Copilot & Codex Tools
+alias cop="gh copilot"
+alias cope="gh copilot explain"
+alias cops="gh copilot suggest"
+
+# Aider (AI Pair Programmer)
+alias ad="aider"
+alias adp="aider --python"
+alias adw="aider --web"
 
 # --- System & Network ---
 alias h="history"

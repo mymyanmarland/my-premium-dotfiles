@@ -11,6 +11,25 @@ Professional Terminal configuration for Full-Stack Developers and AI Engineers. 
 
 ---
 
+## 🤖 AI Engineering Power-ups
+ခေတ်မီ AI နည်းပညာရှင်တွေအတွက် လိုအပ်တဲ့ Tools တွေ (Claude Code, Copilot, Aider) ကို အလွယ်တကူ သုံးနိုင်အောင် စီစဉ်ပေးထားပါတယ်။
+
+### Anthropic Claude Code
+- `cl`: Claude ကို ခေါ်သုံးရန်
+- `cla`: Claude နဲ့ စကားပြောရန် (Chat mode)
+- `clc`: Claude ရဲ့ configuration ပြင်ရန်
+
+### GitHub Copilot & Codex
+- `cop`: GitHub Copilot CLI ကို သုံးရန်
+- `cope`: Command တွေကို ရှင်းပြခိုင်းရန် (Explain)
+- `cops`: Command အသစ်တွေ အကြံပေးခိုင်းရန် (Suggest)
+
+### Aider (AI Pair Programmer)
+- `ad`: Aider ကို စတင်ရန်
+- `adp`: Python development အတွက် Aider ကို သုံးရန်
+
+---
+
 ## 🛠 တပ်ဆင်အသုံးပြုနည်း (Installation)
 
 ### ၁။ Repo ကို Clone လုပ်ပါ
