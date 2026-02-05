@@ -32,7 +32,7 @@ Professional Terminal configuration for Full-Stack Developers and AI Engineers. 
 
 ## 🛠 One-Click Setup (အကုန်လုံး တစ်ခါတည်း တပ်ဆင်နည်း)
 
-ဒီ script တစ်ခုတည်းနဲ့တင် **Configurations** ရော၊ **AI Tools** (Claude, Copilot, Aider) တွေရော အကုန်လုံးကို တစ်ခါတည်း အလိုအလျောက် တပ်ဆင်ပေးသွားမှာ ဖြစ်ပါတယ်။
+ဒီ script တစ်ခုတည်းနဲ့တင် **OpenClaw**, **Claude**, **Copilot**, **Aider** စတဲ့ AI Tools တွေအားလုံးနဲ့ Configurations တွေကို တစ်ခါတည်း အလိုအလျောက် တပ်ဆင်ပေးသွားမှာ ဖြစ်ပါတယ်။
 
 ### ၁။ Repo ကို Clone လုပ်ပါ
 ```bash

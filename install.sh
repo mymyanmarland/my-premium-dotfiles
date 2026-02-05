@@ -31,6 +31,14 @@ fi
 # 4. AI Tools Installation (The Core Tools)
 echo "🤖 Installing/Updating AI Engineering tools..."
 
+# OpenClaw CLI (The Brain)
+if ! command -v openclaw &> /dev/null; then
+    echo "🔌 Installing OpenClaw CLI..."
+    npm install -g openclaw
+else
+    echo "✅ OpenClaw CLI already installed."
+fi
+
 # Claude Code (Anthropic)
 if ! command -v claude &> /dev/null; then
     echo "🔌 Installing Claude Code..."

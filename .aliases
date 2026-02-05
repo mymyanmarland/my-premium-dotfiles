@@ -36,6 +36,7 @@ alias ocs="openclaw status"
 alias ocl="openclaw logs"
 alias ocr="openclaw gateway restart"
 alias ocw="cd /home/codespace/.openclaw/workspace"
+alias och="openclaw help"
 
 # Claude Code (Anthropic AI)
 alias cl="claude"
