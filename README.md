@@ -30,27 +30,25 @@ Professional Terminal configuration for Full-Stack Developers and AI Engineers. 
 
 ---
 
-## 🛠 တပ်ဆင်အသုံးပြုနည်း (Installation)
+## 🛠 One-Click Setup (အကုန်လုံး တစ်ခါတည်း တပ်ဆင်နည်း)
+
+ဒီ script တစ်ခုတည်းနဲ့တင် **Configurations** ရော၊ **AI Tools** (Claude, Copilot, Aider) တွေရော အကုန်လုံးကို တစ်ခါတည်း အလိုအလျောက် တပ်ဆင်ပေးသွားမှာ ဖြစ်ပါတယ်။
 
 ### ၁။ Repo ကို Clone လုပ်ပါ
 ```bash
 git clone https://github.com/mymyanmarland/my-premium-dotfiles.git ~/my-premium-dotfiles
 ```
 
-### ၂။ Install Script ကို Run ပါ
+### ၂။ Installer ကို Run ပါ (ဒါပဲ လုပ်ရုံပါပဲ!)
 ```bash
 cd ~/my-premium-dotfiles && bash install.sh
 ```
 
-### ၃။ Shell ပြောင်းလဲပါ (အရေးကြီးသည်)
-မိတ်ဆွေရဲ့ လက်ရှိ Shell က Bash ဖြစ်နေရင် Zsh ကို ပြောင်းပေးရပါမယ် -
+### ၃။ စတင်အသုံးပြုရန်
 ```bash
 zsh
 ```
-ပြီးရင် environment ကို activate လုပ်ပါ -
-```bash
-source ~/.zshrc
-```
+*(အခုဆိုရင် `cl`, `cop`, `ad` စတဲ့ command တွေ အကုန် အလုပ်လုပ်ပါပြီ)*
 
 ---
 
