@@ -1,18 +1,18 @@
-# --- Zsh Configuration for Stuxnet ---
+# --- Zsh Configuration for Stuxnet (Premium Edition) ---
 
-# 1. Essential System Paths
+# 1. Essential System & Tool Paths
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
+export PATH="$HOME/bin:/home/codespace/.local/bin:/home/codespace/nvm/current/bin:$PATH"
 
-# 2. Node.js & NVM Setup (Crucial for Claude Code)
+# 2. Node.js & NVM Setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# Add global npm bin to path just in case NVM logic misses it
 export PATH="$(npm config get prefix)/bin:$PATH"
 
-# 3. Codespaces & Tool Specific Paths
-export PATH="$HOME/bin:/home/codespace/.local/bin:$PATH"
+# 3. Zsh Plugins (Syntax Highlighting & Suggestions)
+ZSH_PLUGINS_DIR="$HOME/.zsh-plugins"
+[ -f "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[ -f "$ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && source "$ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # 4. History Configuration
 HISTSIZE=10000
@@ -27,19 +27,17 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # 6. Load Aliases
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
+[ -f ~/.aliases ] && source ~/.aliases
 
 # 7. Set up Starship Prompt
 if command -v starship >/dev/null; then
     eval "$(starship init zsh)"
-else
-    PROMPT='%n@%m %~ %# '
 fi
 
-# 8. Key Bindings
-bindkey "^[[A" up-line-or-search
-bindkey "^[[B" down-line-or-search
-
-echo "✨ Ko Paing's Premium Dev Environment Loaded!"
+# 8. Welcome Banner
+echo "\033[1;36m"
+echo "  ⚡ Welcome, Stuxnet! ⚡"
+echo "  -----------------------"
+echo "  Mode: AI-Powered Master"
+echo "  Ready to build greatness."
+echo "\033[0m"

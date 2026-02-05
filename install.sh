@@ -3,68 +3,56 @@
 # Get the directory where this script is located
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-echo "🚀 Starting Ultimate Full-Stack & AI Developer Setup..."
-echo "📂 Configuration folder: $DOTFILES_DIR"
+echo "🚀 Starting Ultra-Premium Terminal Setup for Stuxnet..."
 
-# 1. Create symlinks for configurations
+# 1. Create symlinks
 ln -sf "$DOTFILES_DIR/.zshrc" ~/.zshrc
 ln -sf "$DOTFILES_DIR/.aliases" ~/.aliases
 mkdir -p ~/.config
 ln -sf "$DOTFILES_DIR/starship.toml" ~/.config/starship.toml
 
-echo "✨ Config files linked successfully."
+# 2. Setup Zsh Plugins Directory
+ZSH_PLUGINS_DIR="$HOME/.zsh-plugins"
+mkdir -p "$ZSH_PLUGINS_DIR"
 
-# 2. System Tools Check & Install (Zsh)
-if ! command -v zsh &> /dev/null; then
-    echo "🐚 Zsh is missing. Installing Zsh..."
-    if command -v apt-get &> /dev/null; then
-        sudo apt-get update && sudo apt-get install -y zsh
-    fi
+echo "🎨 Installing Zsh Visual Enhancements..."
+
+# Syntax Highlighting
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting" ]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting"
 fi
 
-# 3. UI Enhancement (Starship)
+# Auto Suggestions
+if [ ! -d "$ZSH_PLUGINS_DIR/zsh-autosuggestions" ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git "$ZSH_PLUGINS_DIR/zsh-autosuggestions"
+fi
+
+# 3. System Tools Check & Install
+if ! command -v zsh &> /dev/null; then
+    sudo apt-get update && sudo apt-get install -y zsh
+fi
+
 if ! command -v starship &> /dev/null; then
-    echo "📦 Installing Starship prompt..."
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
 
-# 4. AI Tools Installation (The Core Tools)
-echo "🤖 Installing/Updating AI Engineering tools..."
+# 4. AI Tools Installation
+echo "🤖 Installing AI Engineering tools..."
 
-# OpenClaw CLI (The Brain)
-if ! command -v openclaw &> /dev/null; then
-    echo "🔌 Installing OpenClaw CLI..."
-    npm install -g openclaw
-else
-    echo "✅ OpenClaw CLI already installed."
-fi
+# OpenClaw
+command -v openclaw &> /dev/null || npm install -g openclaw
 
-# Claude Code (Anthropic)
-if ! command -v claude &> /dev/null; then
-    echo "🔌 Installing Claude Code..."
-    npm install -g @anthropic-ai/claude-code
-else
-    echo "✅ Claude Code already installed."
-fi
+# Claude Code
+command -v claude &> /dev/null || npm install -g @anthropic-ai/claude-code
 
-# Aider (AI Pair Programmer)
-if ! command -v aider &> /dev/null; then
-    echo "🔌 Installing Aider AI..."
-    pip install aider-chat
-else
-    echo "✅ Aider AI already installed."
-fi
+# Aider
+command -v aider &> /dev/null || pip install aider-chat
 
-# GitHub Copilot CLI extension
+# Copilot
 if ! gh extension list | grep -q "copilot"; then
-    echo "🔌 Installing GitHub Copilot CLI extension..."
     gh extension install github/gh-copilot
-else
-    echo "✅ GitHub Copilot CLI already installed."
 fi
 
-# 5. Finalize Setup
 echo ""
-echo "🎉 ALL DONE! Your environment is now fully powered by AI tools."
-echo "👉 Action required: Type 'zsh' to switch to your new shell."
-echo "👉 Then you can use commands like 'cl' (Claude) or 'gs' (Git Status) immediately."
+echo "🎉 ALL DONE! Your terminal is now BEAUTIFUL and POWERFUL."
+echo "👉 Type 'zsh' to see the magic!"
